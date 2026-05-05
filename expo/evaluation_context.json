@@ -4,7 +4,11 @@
     "metro.config.js",
     "evaluation_context.json",
     "bun.lock",
+    "package-lock.json",
+    ".npmrc",
     "eslint.config.js",
+    "credentials.json",
+    "eas.json",
     "babel.config.js",
     "app.json",
     "tsconfig.json",
@@ -58,7 +62,13 @@
         },
         "ios": {
           "supportsTablet": false,
-          "bundleIdentifier": "app.rork.xpyexmf5zzwqg4eon72m6"
+          "bundleIdentifier": "app.rork.xpyexmf5zzwqg4eon72m6",
+          "infoPlist": {
+            "ITSAppUsesNonExemptEncryption": false
+          },
+          "config": {
+            "usesNonExemptEncryption": false
+          }
         },
         "android": {
           "adaptiveIcon": {
@@ -68,7 +78,8 @@
           "package": "app.rork.xpyexmf5zzwqg4eon72m6"
         },
         "web": {
-          "favicon": "./assets/images/favicon.png"
+          "favicon": "./assets/images/favicon.png",
+          "bundler": "metro"
         },
         "plugins": [
           [
@@ -82,6 +93,12 @@
         ],
         "experiments": {
           "typedRoutes": true
+        },
+        "extra": {
+          "router": {},
+          "eas": {
+            "projectId": "7e1d6067-7acb-4cd8-a360-52b2cca4a404"
+          }
         }
       }
     },
@@ -130,6 +147,7 @@
         "react-native-svg": "15.12.1",
         "react-native-web": "^0.21.0",
         "react-native-worklets": "0.5.1",
+        "zod": "^4.4.3",
         "zustand": "^5.0.2"
       },
       "devDependencies": {
@@ -144,6 +162,18 @@
         "axios": "1.13.2"
       },
       "private": true
+    },
+    "eas.json": {
+      "cli": {
+        "version": ">= 11.0.0",
+        "appVersionSource": "remote"
+      },
+      "build": {
+        "production": {
+          "autoIncrement": true,
+          "credentialsSource": "local"
+        }
+      }
     }
   },
   "dependencies": {
@@ -181,12 +211,15 @@
     "react-native-svg": "15.12.1",
     "react-native-web": "^0.21.0",
     "react-native-worklets": "0.5.1",
+    "zod": "^4.4.3",
     "zustand": "^5.0.2"
   },
   "navigation_structure": "Not fully analyzed in this version",
   "permissions": [
     {
-      "ios_infoPlist": {}
+      "ios_infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     }
   ],
   "package_manager": "bun",

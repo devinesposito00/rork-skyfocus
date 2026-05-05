@@ -3,9 +3,9 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "bunx rork start -p xpyexmf5zzwqg4eon72m6 --tunnel",
-    "start-web": "bunx rork start -p xpyexmf5zzwqg4eon72m6 --web --tunnel",
-    "start-web-dev": "DEBUG=expo* bunx rork start -p xpyexmf5zzwqg4eon72m6 --web --tunnel",
+    "start": "npx rork start -p xpyexmf5zzwqg4eon72m6 --tunnel",
+    "start-web": "npx rork start -p xpyexmf5zzwqg4eon72m6 --web --tunnel",
+    "start-web-dev": "DEBUG=expo* npx rork start -p xpyexmf5zzwqg4eon72m6 --web --tunnel",
     "lint": "expo lint"
   },
   "dependencies": {
@@ -55,7 +55,8 @@
     "typescript": "~5.9.2"
   },
   "overrides": {
-    "axios": "1.13.2"
+    "axios": "1.13.2",
+    "expo-location": "~19.0.8"
   },
   "private": true
 }
